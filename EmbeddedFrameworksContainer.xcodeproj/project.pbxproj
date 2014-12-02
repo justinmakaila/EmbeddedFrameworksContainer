@@ -10,6 +10,7 @@
 		7C3CAE181A2E674200FDFE9E /* EmbeddedFrameworksContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C3CAE171A2E674200FDFE9E /* EmbeddedFrameworksContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C3CAE1E1A2E674300FDFE9E /* EmbeddedFrameworksContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3CAE121A2E674200FDFE9E /* EmbeddedFrameworksContainer.framework */; };
 		7C3CAE251A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3CAE241A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.swift */; };
+		7C3CAE2F1A2E675300FDFE9E /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C3CAE2E1A2E675300FDFE9E /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		7C3CAE1D1A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmbeddedFrameworksContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3CAE231A2E674300FDFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3CAE241A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedFrameworksContainerTests.swift; sourceTree = "<group>"; };
+		7C3CAE2E1A2E675300FDFE9E /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		7C3CAE151A2E674200FDFE9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C3CAE2E1A2E675300FDFE9E /* Cartfile */,
 				7C3CAE161A2E674200FDFE9E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3CAE2F1A2E675300FDFE9E /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
