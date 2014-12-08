@@ -11,6 +11,8 @@
 		7C3CAE1E1A2E674300FDFE9E /* EmbeddedFrameworksContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3CAE121A2E674200FDFE9E /* EmbeddedFrameworksContainer.framework */; };
 		7C3CAE251A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3CAE241A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.swift */; };
 		7C3CAE2F1A2E675300FDFE9E /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C3CAE2E1A2E675300FDFE9E /* Cartfile */; };
+		7C613FB91A36132000D5A44B /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C613FB81A36132000D5A44B /* Object.swift */; };
+		7CED0EEA1A2E7FC40017F03F /* EmbeddedFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CED0EE91A2E7FC40017F03F /* EmbeddedFrameworks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		7C3CAE231A2E674300FDFE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3CAE241A2E674300FDFE9E /* EmbeddedFrameworksContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedFrameworksContainerTests.swift; sourceTree = "<group>"; };
 		7C3CAE2E1A2E675300FDFE9E /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
+		7C613FB81A36132000D5A44B /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		7CED0EE91A2E7FC40017F03F /* EmbeddedFrameworks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EmbeddedFrameworks.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CED0EEA1A2E7FC40017F03F /* EmbeddedFrameworks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +80,7 @@
 			children = (
 				7C3CAE171A2E674200FDFE9E /* EmbeddedFrameworksContainer.h */,
 				7C3CAE151A2E674200FDFE9E /* Supporting Files */,
+				7C613FB81A36132000D5A44B /* Object.swift */,
 			);
 			path = EmbeddedFrameworksContainer;
 			sourceTree = "<group>";
@@ -82,6 +88,7 @@
 		7C3CAE151A2E674200FDFE9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7CED0EE91A2E7FC40017F03F /* EmbeddedFrameworks.framework */,
 				7C3CAE2E1A2E675300FDFE9E /* Cartfile */,
 				7C3CAE161A2E674200FDFE9E /* Info.plist */,
 			);
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C613FB91A36132000D5A44B /* Object.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,25 +331,36 @@
 		7C3CAE291A2E674300FDFE9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmbeddedFrameworksContainer",
+				);
 				INFOPLIST_FILE = EmbeddedFrameworksContainer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7C3CAE2A1A2E674300FDFE9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmbeddedFrameworksContainer",
+				);
 				INFOPLIST_FILE = EmbeddedFrameworksContainer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -399,6 +418,7 @@
 				7C3CAE2A1A2E674300FDFE9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C3CAE2B1A2E674300FDFE9E /* Build configuration list for PBXNativeTarget "EmbeddedFrameworksContainerTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +427,7 @@
 				7C3CAE2D1A2E674300FDFE9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
